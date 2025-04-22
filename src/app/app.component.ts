@@ -19,7 +19,7 @@ export class AppComponent {
       year: 2020,
       mileage: 50000,
       location: 'Київ',
-      imageUrl: 'https://cdn.bmwblog.com/wp-content/uploads/2019/11/2020-BMW-X5-M-Competition-Tanzanite-Blue-II-24.jpg'
+      imageUrl: 'assets/images/sports_car.jpg'
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ export class AppComponent {
       year: 2021,
       mileage: 30000,
       location: 'Львів',
-      imageUrl: 'https://cdn.motor1.com/images/mgl/kXQZW/s1/2020-audi-q7-first-drive.jpg'
+      imageUrl: 'assets/images/sports_car.jpg'
     },
     {
       id: 3,
@@ -37,7 +37,7 @@ export class AppComponent {
       year: 2019,
       mileage: 45000,
       location: 'Одеса',
-      imageUrl: 'https://cdn.motor1.com/images/mgl/2NLzy/s1/2019-mercedes-benz-gle-class.jpg'
+      imageUrl: 'assets/images/sports_car.jpg'
     }
   ];
 }

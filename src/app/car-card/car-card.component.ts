@@ -23,44 +23,57 @@ import { Car } from '../interfaces/car.interface';
   styles: [`
     .car-card {
       background: white;
-      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+      border-radius: 2px;
       overflow: hidden;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
     }
 
     .car-card:hover {
-      transform: translateY(-5px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     .car-card img {
       width: 100%;
-      height: 200px;
+      height: 180px;
       object-fit: cover;
     }
 
     .car-info {
-      padding: 16px;
+      padding: 12px;
     }
 
     .car-info h3 {
       margin: 0 0 8px;
-      font-size: 18px;
-      color: #333;
+      font-size: 16px;
+      font-weight: 500;
+      color: #256799;
     }
 
     .price {
-      font-size: 20px;
-      font-weight: bold;
-      color: #db5c4c;
+      font-size: 18px;
+      font-weight: 700;
+      color: #3c9806;
       margin: 8px 0;
     }
 
     .details {
       display: flex;
-      gap: 12px;
-      color: #666;
-      font-size: 14px;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    .details span {
+      position: relative;
+      padding-right: 8px;
+    }
+
+    .details span:not(:last-child):after {
+      content: "•";
+      position: absolute;
+      right: -4px;
+      color: #ddd;
     }
   `]
 })

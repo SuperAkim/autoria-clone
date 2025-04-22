@@ -1,7 +1,7 @@
 <header class="main-header">
   <div class="container">
     <div class="logo">
-      <img src="assets/images/logo.svg" alt="AutoRia" />
+      <img src="https://via.placeholder.com/120x40?text=AutoRia" alt="AutoRia" />
     </div>
     <nav class="main-nav">
       <a href="#" class="nav-link">Авто</a>
@@ -15,46 +15,128 @@
   </div>
 </header>
 
-<main>
-  <section class="search-section">
-    <div class="container">
-      <h1>Пошук автомобілів</h1>
-      <div class="search-form">
+<section class="search-section">
+  <div class="container">
+    <h1>Пошук автомобілів в Україні</h1>
+  </div>
+</section>
+
+<div class="container">
+  <div class="main-content">
+    <aside class="filters-sidebar">
+      <select class="form-control">
+        <option>Всі типи транспорту</option>
+        <option>Легкові</option>
+        <option>Мото</option>
+        <option>Вантажівки</option>
+      </select>
+
+      <div class="filter-group">
         <select class="form-control">
           <option>Марка</option>
+          <option>BMW</option>
+          <option>Audi</option>
+          <option>Mercedes-Benz</option>
         </select>
         <select class="form-control">
           <option>Модель</option>
         </select>
-        <select class="form-control">
-          <option>Регіон</option>
-        </select>
-        <select class="form-control">
-          <option>Рік від</option>
-        </select>
-        <select class="form-control">
-          <option>Рік до</option>
-        </select>
-        <select class="form-control">
-          <option>Ціна від</option>
-        </select>
-        <select class="form-control">
-          <option>Ціна до</option>
-        </select>
-        <button class="search-btn">Пошук</button>
       </div>
-    </div>
-  </section>
 
-  <section class="cars-section">
-    <div class="container">
+      <div class="filter-group">
+        <div class="price-inputs">
+          <input type="number" class="form-control" placeholder="Ціна від">
+          <input type="number" class="form-control" placeholder="Ціна до">
+          <select class="form-control">
+            <option>USD</option>
+            <option>EUR</option>
+            <option>UAH</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="grid-2">
+          <input type="number" class="form-control" placeholder="Рік від">
+          <input type="number" class="form-control" placeholder="Рік до">
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="grid-2">
+          <input type="number" class="form-control" placeholder="Пробіг від">
+          <input type="number" class="form-control" placeholder="Пробіг до">
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <select class="form-control">
+          <option>Тип кузова</option>
+          <option>Седан</option>
+          <option>Універсал</option>
+          <option>Позашляховик/Кросовер</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <select class="form-control">
+          <option>Тип палива</option>
+          <option>Бензин</option>
+          <option>Дизель</option>
+          <option>Електро</option>
+          <option>Гібрид</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <select class="form-control">
+          <option>Коробка передач</option>
+          <option>Ручна/Механіка</option>
+          <option>Автомат</option>
+          <option>Типтронік</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <select class="form-control">
+          <option>Привід</option>
+          <option>Передній</option>
+          <option>Задній</option>
+          <option>Повний</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <select class="form-control">
+          <option>Область</option>
+          <option>Київська</option>
+          <option>Львівська</option>
+        </select>
+        <select class="form-control">
+          <option>Місто</option>
+        </select>
+      </div>
+
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox"> Нерозмитнені
+        </label>
+        <label>
+          <input type="checkbox"> Виключити нерозмитнені
+        </label>
+      </div>
+
+      <button class="search-btn">Показати результати</button>
+    </aside>
+
+    <section class="cars-section">
       <div class="cars-grid">
         @for (car of cars; track car.id) {
           <app-car-card [car]="car" />
         }
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </div>
+</div>
 
 <router-outlet></router-outlet>
