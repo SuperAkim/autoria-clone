@@ -1,0 +1,60 @@
+<header class="main-header">
+  <div class="container">
+    <div class="logo">
+      <img src="assets/images/logo.svg" alt="AutoRia" />
+    </div>
+    <nav class="main-nav">
+      <a href="#" class="nav-link">Авто</a>
+      <a href="#" class="nav-link">Автотовари</a>
+      <a href="#" class="nav-link">Запчастини</a>
+      <a href="#" class="nav-link">Продати авто</a>
+    </nav>
+    <div class="auth-section">
+      <button class="login-btn">Увійти</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="search-section">
+    <div class="container">
+      <h1>Пошук автомобілів</h1>
+      <div class="search-form">
+        <select class="form-control">
+          <option>Марка</option>
+        </select>
+        <select class="form-control">
+          <option>Модель</option>
+        </select>
+        <select class="form-control">
+          <option>Регіон</option>
+        </select>
+        <select class="form-control">
+          <option>Рік від</option>
+        </select>
+        <select class="form-control">
+          <option>Рік до</option>
+        </select>
+        <select class="form-control">
+          <option>Ціна від</option>
+        </select>
+        <select class="form-control">
+          <option>Ціна до</option>
+        </select>
+        <button class="search-btn">Пошук</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="cars-section">
+    <div class="container">
+      <div class="cars-grid">
+        @for (car of cars; track car.id) {
+          <app-car-card [car]="car" />
+        }
+      </div>
+    </div>
+  </section>
+</main>
+
+<router-outlet></router-outlet>
